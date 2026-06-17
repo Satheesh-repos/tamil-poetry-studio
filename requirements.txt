@@ -1,0 +1,5 @@
+streamlit
+pillow
+webdriver-manager
+selenium
+

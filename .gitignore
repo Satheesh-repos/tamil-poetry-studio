@@ -1,0 +1,6 @@
+.DS_Store
+venv/
+**pycache**/
+*.pyc
+poetry_post.png
+temp_preview.html
