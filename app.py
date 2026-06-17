@@ -2,6 +2,7 @@ import streamlit as st
 import base64
 from pathlib import Path
 
+"""
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from webdriver_manager.chrome import ChromeDriverManager
@@ -9,7 +10,7 @@ from selenium.webdriver.chrome.service import Service
 
 from PIL import Image
 import time
-
+"""
 
 st.set_page_config(
     page_title="Tamil Poetry Studio Royal",
@@ -467,78 +468,12 @@ st.components.v1.html(
 
 # ==========================================
 
-# Export PNG
+# PNG Export (Temporary Test)
 
 # ==========================================
 
-if st.button("📸 Generate PNG"):
-
-
-    temp_html = Path("temp_preview.html")
-
-    temp_html.write_text(
-        html,
-        encoding="utf-8"
-    )
-
-    options = Options()
-
-    options.add_argument("--headless=new")
-
-    options.add_argument(
-        "--window-size=1080,1080"
-    )
-
-    driver = webdriver.Chrome(
-        service=Service(
-            ChromeDriverManager().install()
-        ),
-        options=options
-    )
-
-    driver.get(
-        f"file://{temp_html.resolve()}"
-    )
-
-    driver.set_window_size(
-        1200,
-        1400
-    )
-    time.sleep(5)
-
-    element = driver.find_element(
-        "css selector",
-        ".container"
-    )
-
-    driver.execute_script(
-        "window.scrollTo(0,0);"
-    )
-
-    time.sleep(2)
-
-
-    element.screenshot(
-        "poetry_post.png"
-    )
-
-    driver.quit()
-
-    st.success(
-        "PNG generated successfully"
-    )
-
-    with open(
-        "poetry_post.png",
-        "rb"
-    ) as file:
-
-        st.download_button(
-            "⬇ Download PNG",
-            data=file,
-            file_name="poetry_post.png",
-            mime="image/png"
-        )
-
+st.info(
+"PNG Export will be migrated from Selenium to browser-side capture."
+)
 
 
