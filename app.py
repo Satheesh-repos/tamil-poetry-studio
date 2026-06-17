@@ -2,15 +2,15 @@ import streamlit as st
 import base64
 from pathlib import Path
 
-"""
-from selenium import webdriver
-from selenium.webdriver.chrome.options import Options
-from webdriver_manager.chrome import ChromeDriverManager
-from selenium.webdriver.chrome.service import Service
 
-from PIL import Image
-import time
-"""
+#from selenium import webdriver
+#from selenium.webdriver.chrome.options import Options
+#from webdriver_manager.chrome import ChromeDriverManager
+#from selenium.webdriver.chrome.service import Service
+
+#from PIL import Image
+#import time
+
 
 st.set_page_config(
     page_title="Tamil Poetry Studio Royal",
